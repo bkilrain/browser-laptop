@@ -194,8 +194,7 @@ class Frame extends ImmutableComponent {
   }
 
   shouldCreateWebview () {
-    return !this.webview ||
-      !!this.webview.allowRunningPlugins !== (this.allowRunningFlashPlugin() || this.allowRunningWidevinePlugin())
+    return !this.webview
   }
 
   runInsecureContent () {
@@ -334,7 +333,6 @@ class Frame extends ImmutableComponent {
       this.webview.setUserAgentOverride(hack.userAgent)
     }
     if (this.allowRunningFlashPlugin() || this.allowRunningWidevinePlugin()) {
-      this.webview.setAllowPlugins(true)
       this.webview.allowRunningPlugins = true
     }
 
