@@ -144,8 +144,7 @@ const doAction = (action) => {
 
         case settings.MINIMUM_VISIT_TIME:
           if (action.value <= 0) break
-
-          synopsis.options.minDuration = action.value * 1000
+          synopsis.options.minDuration = action.value
           updatePublisherInfo()
           break
 
@@ -1225,9 +1224,6 @@ var getStateInfo = (state) => {
 
   ledgerInfo.paymentId = state.properties.wallet.paymentId
   ledgerInfo.passphrase = state.properties.wallet.keychains.passphrase
-
-  ledgerInfo.minDuration = synopsis.options.minDuration
-  ledgerInfo.minPublisherVisits = synopsis.options.minPublisherVisits
 
   ledgerInfo.created = !!state.properties.wallet
   ledgerInfo.creating = !ledgerInfo.created
