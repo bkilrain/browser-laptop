@@ -3,7 +3,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const appUrlUtil = require('../lib/appUrlUtil')
-const iconPath = appUrlUtil.fileUrl('img/newtab/defaultTopSitesIcon')
+const iconPath = 'img/newtab/defaultTopSitesIcon'
 
 /**
  * Let lastAccessedTime be the first-time user see the new tab page
